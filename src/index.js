@@ -186,7 +186,7 @@ export default class Carousel extends React.Component {
           direction
         };
 
-        this.setState({
+        this.props.edgeEasingEnabled && this.setState({
           left: this.props.vertical
             ? 0
             : this.getTargetLeft(
@@ -262,7 +262,7 @@ export default class Carousel extends React.Component {
           direction
         };
 
-        this.setState({
+        this.props.edgeEasingEnabled && this.setState({
           left: this.props.vertical
             ? 0
             : this.getTargetLeft(
@@ -1083,6 +1083,7 @@ Carousel.propTypes = {
   dragging: PropTypes.bool,
   easing: PropTypes.string,
   edgeEasing: PropTypes.string,
+  edgeEasingEnabled: React.PropTypes.bool,
   frameOverflow: PropTypes.string,
   framePadding: PropTypes.string,
   heightMode: PropTypes.oneOf(['first', 'current', 'max']),
@@ -1121,6 +1122,7 @@ Carousel.defaultProps = {
   dragging: true,
   easing: 'easeCircleOut',
   edgeEasing: 'easeElasticOut',
+  edgeEasingEnabled: true,
   framePadding: '0px',
   frameOverflow: 'hidden',
   heightMode: 'first',
