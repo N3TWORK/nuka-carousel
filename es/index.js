@@ -1093,7 +1093,7 @@ Carousel.propTypes = {
   dragging: PropTypes.bool,
   easing: PropTypes.string,
   edgeEasing: PropTypes.string,
-  edgeEasingEnabled: React.PropTypes.bool,
+  edgeEasingEnabled: PropTypes.bool,
   frameOverflow: PropTypes.string,
   framePadding: PropTypes.string,
   heightMode: PropTypes.oneOf(['first', 'current', 'max']),
